@@ -13,6 +13,15 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      backgroundColor: {
+        'blue-bg': '#00386f',
+      },
+      fontFamily: {
+        pexico: ['pexico', 'sans'],
+        proximaReg: ['proxima-reg', 'sans'],
+        proximaBold: ['proxima-bold', 'sans'],
+        proximaSemi: ['proxima-semi', 'sans']
+      }
     },
   },
   plugins: [],

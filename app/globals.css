@@ -8,20 +8,216 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'pexico';
+  src: url('/fonts/pexico.otf') format('opentype');
+  /* Add more src formats if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima-reg';
+  src: url('/fonts/proxima-reg.otf') format('opentype');
+  /* Add more src formats if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima-bold';
+  src: url('/fonts/proxima-bold.otf') format('opentype');
+  /* Add more src formats if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima-semi';
+  src: url('/fonts/proxima-semi.ttf') format('truetype');
+  /* Add more src formats if necessary */
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #000;
+  background: #01e08f;
 }
+
+#hero h1 {
+  font-size: 100px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 100px;
+}
+
+.main-menu {
+  font-size:19px;
+  color: #00386F;
+  gap: 50px;
+}
+
+.intro-pos h2 {
+  color:#fff;
+  font-size:48px;
+}
+
+.intro-pos h3 {
+  font-size: 25px;
+  color: #fff;
+}
+
+.skew-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  transform: skewY(3deg); /* Adjust the skew angle as needed */
+  transform-origin: top left;
+  z-index: -1;
+}
+
+.skew-bottom::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  transform: skewY(-3deg); /* Adjust the skew angle as needed */
+  transform-origin: bottom left;
+  z-index: -1;
+}
+
+.cta-prop {
+  width: 167px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*** ProjectSlider ***/
+.project-slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%; /* Ensure the slider takes up the full width */
+}
+
+.project-container {
+  min-width: 100%;
+  flex-shrink: 0;
+  display: flex; /* Display projects horizontally */
+  align-items: center; /* Center projects vertically */
+  justify-content: center; /* Center projects horizontally */
+  transition: transform 0.3s ease;
+  /* You may need to adjust these styles based on your design */
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
+}
+
+/*** End ProjectSlider ***/
+
+/** Deck Slider **/
+
+
+/* .deck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom-card {
+  width: 200px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 10px;
+  transition: transform 0.3s, z-index 0.3s;
+  cursor: pointer;
+  position: relative;
+} */
+
+/* .custom-card img {
+  max-width: 100%;
+  max-height: 100px;
+} */
+
+.deck {
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin: 10% auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.custom-card {
+  position: absolute;
+  text-align: center;
+  width: 724px;
+  height: 472px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: 0 12.5px 50px -10px rgba(50,50,73,.4), 0 10px 10px -10px rgba(50,50,73,.3);
+  border-radius:5px;
+}
+
+.custom-card.selected {
+  transform: translateY(-20px) scale(1.1);
+  z-index: 999;
+}
+
+.custom-card img {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 12.5px 50px -10px rgba(50,50,73,.4), 0 10px 10px -10px rgba(50,50,73,.3);
+  border-radius:10px;
+}
+
+.custom-card h3 {
+  margin: 5px;
+  font-size: 18px;
+}
+
+.custom-card p {
+  margin: 5px;
+  font-size: 14px;
+}
+
+.custom-card a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #0070f3;
+  font-weight: bold;
+}
+
+
+
+/** End deck slider **/

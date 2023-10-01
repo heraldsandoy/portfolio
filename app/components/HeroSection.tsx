@@ -20,7 +20,6 @@ function HeroSection() {
           <div className="skew-bottom bg-blue-bg"></div>
         </div>
       </Link>
-
   
     </div>
     <div className="w-1/2 p-4 relative min-h-[500px]">

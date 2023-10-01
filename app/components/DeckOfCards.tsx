@@ -1,9 +1,17 @@
 "use client"
 
 import React, { useState, useRef, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 interface DeckOfCardsProps {
-  cardData: { background: string }[];
+  cardData: {
+    background: string;
+    title: string;
+    description: string;
+    link: string;
+  }[];
 }
 
 const DeckOfCards: React.FC<DeckOfCardsProps> = ({ cardData }) => {
@@ -60,21 +68,17 @@ const DeckOfCards: React.FC<DeckOfCardsProps> = ({ cardData }) => {
   }, [isDragging, startX, offsetX]);
 
   const handleNextCard = () => {
-    if (selectedCardIndex < cardData.length - 1) {
-      setSelectedCardIndex(selectedCardIndex + 1);
-    } else {
-      setSelectedCardIndex(0);
-      setOffsetX(0); // Reset offsetX when looping to the first card
-    }
+    setSelectedCardIndex((prevIndex) =>
+      prevIndex === cardData.length - 1 ? 0 : prevIndex + 1
+    );
+    setOffsetX(0);
   };
 
   const handlePrevCard = () => {
-    if (selectedCardIndex > 0) {
-      setSelectedCardIndex(selectedCardIndex - 1);
-    } else {
-      setSelectedCardIndex(cardData.length - 1);
-      setOffsetX(0); // Reset offsetX when looping to the last card
-    }
+    setSelectedCardIndex((prevIndex) =>
+      prevIndex === 0 ? cardData.length - 1 : prevIndex - 1
+    );
+    setOffsetX(0);
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -83,29 +87,56 @@ const DeckOfCards: React.FC<DeckOfCardsProps> = ({ cardData }) => {
   };
 
   return (
-    <div
-      className="deck"
-      onMouseDown={(e) => handleMouseDown(e)}
-      ref={containerRef}
-    >
-      {cardData.map((card, index) => (
-        <div
-          key={index}
-          className={`custom-card ${
-            index === selectedCardIndex ? 'selected' : ''
-          }`}
-          style={{
-            zIndex: cardData.length - Math.abs(index - selectedCardIndex),
-            transform: `translateX(${
-              index === selectedCardIndex ? offsetX : 0
-            }px) rotate(${(index - selectedCardIndex) * 5}deg)`,
-            backgroundImage: `url(${card.background})`,
-            transition: 'transform 0.3s ease', // Smoother transition
-          }}
-        ></div>
-      ))}
-      <button onClick={handlePrevCard}>Previous</button>
-      <button onClick={handleNextCard}>Next</button>
+    <div className="deck-container">
+      <div
+        className="deck"
+        onMouseDown={(e) => handleMouseDown(e)}
+        ref={containerRef}
+      >
+        {cardData.map((card, index) => (
+          <div
+            key={index}
+            className={`custom-card ${
+              index === selectedCardIndex ? 'selected' : ''
+            }`}
+            style={{
+              zIndex: cardData.length - Math.abs(index - selectedCardIndex),
+              transform: `translateX(${
+                index === selectedCardIndex ? offsetX : 0
+              }px) rotate(${(index - selectedCardIndex) * 5}deg)`, // Apply rotation here
+              backgroundImage: `url(${card.background})`,
+              transition: 'transform 0.3s ease', // Smoother transition
+            }}
+          ></div>
+        ))}
+      </div>
+      <div className="description-slider">
+        <div className="description-card">
+          <div className="description-body text-left">
+            <h3 className="font-proximaSemi text-white ">{cardData[selectedCardIndex].title}</h3>
+            <p className="mb-10">{cardData[selectedCardIndex].description}</p>
+
+            <div>
+              <Link href={cardData[selectedCardIndex].link} target='_blank'>
+                <div className="relative bg-green-bg text-white cta-prop">
+                  <div className="skew-top bg-green-bg z-10"></div>
+                    <p className="font-pexico relative z-20">VIEW PROJECT</p>
+                  <div className="skew-bottom bg-green-bg z-10"></div>
+                </div>
+              </Link>
+            </div>
+
+            <div className="mt-10">
+              <button className="navbtn previous" onClick={handlePrevCard}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </button>
+              <button className="navbtn next" onClick={handleNextCard}>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

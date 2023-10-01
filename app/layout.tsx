@@ -1,6 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import Navbar from './components/Navbar'
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
+config.autoAddCss = false;
+
 
 export const metadata: Metadata = {
   title: 'Herald Sandoy - Porfolio',

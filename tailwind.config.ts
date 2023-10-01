@@ -15,6 +15,7 @@ const config: Config = {
       },
       backgroundColor: {
         'blue-bg': '#00386f',
+        'green-bg': '#01E08F'
       },
       fontFamily: {
         pexico: ['pexico', 'sans'],

@@ -13,7 +13,7 @@ function Collaborated() {
         </div>
         <div className="flex items-center mx-auto">
           <div className="w-1/2 gray-img-bg min-h-[700px] relative">
-            <Image className="absolute top-[80px]" src="/keri.png" width="830" height="785" alt="Keri" />
+            <Image className="absolute top-[80px]" src="/Keri.png" width="830" height="785" alt="Keri" />
           </div>
 
           <div className="w-1/2 relative min-h-[700px] bg-blue-bg flex flex-col justify-center items-center">

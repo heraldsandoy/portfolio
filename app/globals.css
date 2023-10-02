@@ -163,6 +163,20 @@ body {
   color: #00386F;
 }
 
+.limp-c {
+  z-index: 9;
+}
+
+.text-import {
+  font-size:16px !important;
+}
+
+.gray-img-bg {
+  background:url('/gray.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
 .description-card {
   display: flex;
   justify-content: flex-end;

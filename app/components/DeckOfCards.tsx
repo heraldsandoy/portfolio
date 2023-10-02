@@ -120,7 +120,7 @@ const DeckOfCards: React.FC<DeckOfCardsProps> = ({ cardData }) => {
               <Link href={cardData[selectedCardIndex].link} target='_blank'>
                 <div className="relative bg-green-bg text-white cta-prop">
                   <div className="skew-top bg-green-bg z-10"></div>
-                    <p className="font-pexico relative z-20">VIEW PROJECT</p>
+                    <p className="font-pexico relative z-20 text-import">VIEW PROJECT</p>
                   <div className="skew-bottom bg-green-bg z-10"></div>
                 </div>
               </Link>

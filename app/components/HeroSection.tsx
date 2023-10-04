@@ -23,7 +23,7 @@ function HeroSection() {
   
     </div>
     <div className="w-1/2 p-4 relative min-h-[500px]">
-        <Image className="absolute top-0" src="/herald.png" width="1199" height="1144" alt="herald hero image" />
+        <Image className="absolute top-0" src="/grey-herald.png" width="1247" height="1193" alt="herald hero image" />
     </div>
   </section>
   )

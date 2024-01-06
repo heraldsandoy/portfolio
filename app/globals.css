@@ -264,14 +264,79 @@ body {
 /** End deck slider **/
 
 @media (max-width: 1440px) {
+  .deck-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
   .deck {
     justify-content: center;
+    width: 70%;
   }
 
   .description-card {
     justify-content: center;
-    margin-top: 600px;
+    margin-top: 120px;
+    padding: 40px 0 0 60px;
     padding-bottom: 100px;
+  }
+
+  .description-body p {
+    padding-top: 15px;
+    font-size: 16px;
+  }
+
+  .rotator {
+    padding-top: 40px;
+  }
+
+  .cta-prop p {
+    padding-top: 0px !important;
+  }
+
+  .description-card h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .deck {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1250px) {
+  #hero h1 {
+    font-size: 70px;
+    line-height: 80px;
+  }
+
+  #hero img {
+    top: 60px;
+  }
+
+  #hero {
+    padding-top: 0px !important;
+  }
+}
+
+@media (max-width: 1230px) {
+  .deck-container {
+    flex-direction: column;
+  }
+
+  .description-body {
+    max-width: 100%;
+  }
+
+  .description-slider {
+    padding-top: 400px;
+    width: 100%;
+  }
+
+  .description-card {
+    justify-content: start;
   }
 }
 
@@ -296,30 +361,89 @@ body {
 }
 
 @media (max-width: 767px) {
+  .section-reset {
+    min-height: 400px;
+  }
+
+  .section-reset .intro-pos {
+    margin-top: 0px !important;
+  }
+
+  .section-reset .inner-child {
+    max-width: 90%;
+  }
+
+  .reverse-col {
+    flex-direction: column-reverse;
+  }
+
+  .column-mobile {
+    flex-direction: column;
+  }
+
+  .max-m {
+    width: 100%;
+  }
+
   .custom-card {
     width: 80%;
   }
 
-  .description-card {
-    max-width: 80%;
-    margin: 540px auto 0 auto;
-    padding-bottom: 100px;
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 600px) {
-  .custom-card {
-    width: 90%;
-    box-shadow: none;
+  .hero-max-mobile {
+    width: 100%;
+    margin-top: 30px;
+    padding: 60px 40px;
   }
 
   .deck {
+    padding-top: 0px;
     margin-top: 0px;
   }
 
   .description-card {
-    max-width: 90%;
-    margin-top: 480px;
+    padding: 40px 40px 80px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  #hero {
+    padding-bottom: 0px !important;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero-max-mobile {
+    width: 90%;
+    margin: 30px auto;
+    padding: 60px 0px;
+  }
+
+  #hero h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .intro-pos h2 {
+    color: #fff;
+    font-size: 30px;
+  }
+
+  .intro-pos {
+    margin-top: 5px;
+  }
+
+  .intro-pos h3 {
+    font-size: 20px;
+    color: #fff;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 20px;
   }
 }

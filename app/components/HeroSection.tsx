@@ -4,8 +4,8 @@ import Link from "next/link"
 
 function HeroSection() {
   return (
-    <section id="hero" className="flex items-center 2xl:max-w-[1600px] xl:max-w-[95%] lg:max-w-[95%] md:max-w-[95%] mx-auto py-[60px]">
-      <div className="w-1/2 p-4">
+    <section id="hero" className="flex items-center 2xl:max-w-[1600px] xl:max-w-[95%] lg:max-w-[95%] md:max-w-[90%] mx-auto py-[60px]">
+      <div className="w-1/2 p-4 hero-max-mobile">
         <h1 className="font-pexico">
           I'M HERALD <br />
           SANDOY

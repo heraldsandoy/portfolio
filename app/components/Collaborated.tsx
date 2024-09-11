@@ -19,16 +19,9 @@ function Collaborated() {
             <div className="max-w-[60%] inner-child">
               <div className="intro-pos mb-10 mt-10">
                 <h2 className="font-proximaBold leading-[40px]">Keri Delivery</h2>
-                <p className="text-white pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus nisl non arcu accumsan rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <p className="text-white pt-5">Assisted the app development team by creating mobile app pages from design files.</p>
               </div>
 
-              <Link href="/">
-                <div className="relative bg-green-bg text-white cta-prop">
-                  <div className="skew-top bg-green-bg z-10"></div>
-                  <p className="z-20 font-pexico">VIEW PROJECT</p>
-                  <div className="skew-bottom bg-green-bg z-10"></div>
-                </div>
-              </Link>
             </div>
           </div>
         </div>
@@ -40,7 +33,9 @@ function Collaborated() {
             <div className="max-w-[60%] inner-child">
               <div className="intro-pos mb-10 mt-10">
                 <h2 className="font-proximaBold leading-[40px]">Chris-Pay</h2>
-                <p className="text-white pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus nisl non arcu accumsan rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <p className="text-white pt-5">Chris Pay offers cloud-based HRMS and payroll solutions. Chris Pay Enterprise offers solutions for workforce scheduling, employee document management, biometrics based attendance management, workflow approvals, employee information management and HR reporting and analytics.
+                </p>
+                <p className="text-white pt-5">Contributed to the app development team by implementing frontend pages based on design files.</p>
               </div>
             </div>
           </div>

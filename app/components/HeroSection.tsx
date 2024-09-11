@@ -16,7 +16,7 @@ function HeroSection() {
           <h3 className="font-proximaSemi">Based on Philippines</h3>
         </div>
 
-        <Link href="/">
+        <Link href="mailto:sandoyherald1993@gmail.com">
           <div className="relative bg-blue-bg text-white cta-prop">
             <div className="skew-top bg-blue-bg"></div>
             <p className="z-10 font-pexico">CONTACT ME</p>

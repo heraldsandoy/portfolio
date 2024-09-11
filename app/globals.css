@@ -40,9 +40,27 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth 
+} 
+
 body {
   color: #000;
   background: #01e08f;
+}
+
+.mobile-toggled-menu {
+  display:none;
+}
+
+nav {
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #01e08f;
+}
+
+#hero {
+  padding-top:10%;
 }
 
 #hero h1 {
@@ -66,6 +84,14 @@ body {
 .intro-pos h3 {
   font-size: 25px;
   color: #fff;
+}
+
+.show-mobile {
+  display:none;
+}
+
+.show-m-flex {
+  display:none;
 }
 
 .skew-top::before {
@@ -317,7 +343,7 @@ body {
   }
 
   #hero {
-    padding-top: 0px !important;
+    padding-top: 10%;
   }
 }
 
@@ -347,6 +373,10 @@ body {
 }
 
 @media (max-width: 860px) {
+  #hero {
+    padding-top:20%;
+  }
+
   .custom-card {
     width: 100%;
     height: 472px;
@@ -361,6 +391,32 @@ body {
 }
 
 @media (max-width: 767px) {
+
+  .mobile-toggled-menu {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  .resume {
+    margin-top:20px;
+  }
+
+  .main-menu {
+    gap:20px;
+  }
+
+  .hide-mobile {
+    display:none !important;
+  }
+
+  .show-mobile {
+    display:block;
+  }
+
+  .show-m-flex {
+    display:flex !important;
+  }
+
   .section-reset {
     min-height: 400px;
   }
@@ -406,13 +462,6 @@ body {
 }
 
 @media (max-width: 600px) {
-  #hero {
-    padding-bottom: 0px !important;
-  }
-
-  nav {
-    display: none;
-  }
 
   .hero-max-mobile {
     width: 90%;
